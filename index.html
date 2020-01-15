@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <link
+      href="data:image/x-icon;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQEAYAAABPYyMiAAAABmJLR0T///////8JWPfcAAAACXBIWXMAAABIAAAASABGyWs+AAAAF0lEQVRIx2NgGAWjYBSMglEwCkbBSAcACBAAAeaR9cIAAAAASUVORK5CYII="
+      rel="icon"
+      type="image/x-icon"
+    />
+    <title>Test</title>
+    <style media="screen">
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      #slides {
+        overflow-y: hidden;
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+
+        -webkit-overflow-scrolling: touch;
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+        scrollbar-width: none;
+      }
+
+      .slide {
+        scroll-snap-align: start;
+        height: 100vh;
+        min-width: 100vw;
+        padding: 2.5vh 2.5vw 2.5vh 2.5vw;
+      }
+
+      #slide-1 {
+        background-color: aqua;
+      }
+      #slide-2 {
+        background-color: blueviolet;
+      }
+      #slide-3 {
+        background-color: chartreuse;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="slides"></div>
+    <script src="./index.js" charset="utf-8"></script>
+  </body>
+</html>
